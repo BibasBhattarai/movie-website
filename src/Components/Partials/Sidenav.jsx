@@ -13,15 +13,19 @@ const Sidenav = () => {
         <nav className='flex flex-col text-zinc-400 text-xl gap-1'>
             <h1 className='text-white font-semibold mt-8 mb-2 text -xl'>
             New Feeds</h1>
-            <Link className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
+            <Link to="/trending" className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
             <i className=" mr-2 ri-fire-fill"></i>Trending</Link>
-            <Link className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
+
+            <Link to="/popular" className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
             <i className=" mr-2 ri-bard-fill"></i> Popular</Link>
-            <Link className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
+
+            <Link to="/movie" className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
             <i className="mr-2 ri-movie-2-fill"></i> Movies</Link>
-            <Link className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
+
+            <Link to="/tv" className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
             <i className="mr-2 ri-tv-2-fill"></i>TV Shows</Link>
-            <Link className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
+
+            <Link to="/person"  className='hover:bg-[#6556CD] hover:text-white p-3 rounded-lg'>
             <i className="mr-2 ri-team-fill"></i>People</Link>
 
 

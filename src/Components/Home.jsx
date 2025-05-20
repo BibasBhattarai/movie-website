@@ -5,6 +5,8 @@ import axios from '../Utils/axios'
 import Headers from './Partials/Headers'
 import HorizontalCards from './Partials/HorizontalCards'
 import Dropdown from './Partials/Dropdown'
+import Loading from './Loading'
+
 
 const Home = () => {
     document.title="PopcornMode | Homepage"
@@ -37,7 +39,7 @@ const Home = () => {
         GetTrending();
         !wallpaper && GetHeaderWallpaper();
     },[category]);
-    console.log(trending);
+    // console.log(trending);
 
     return wallpaper && trending ? (
    <>
@@ -57,7 +59,10 @@ const Home = () => {
     </div>
 
    </>
-  ): <h1>Loading</h1>
+  ): <Loading />
 }
 
 export default Home
+
+
+

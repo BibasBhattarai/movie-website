@@ -17,14 +17,18 @@ const Headers = ({data}) => {
             data.original_title || 
             data.orginal_name}</h1>
     <p className='w-[60%] mt-3 mb-3 text-white'>{data.overview.slice(0,200)}...
-      <Link className='text-blue-400'>more</Link>
+      <Link 
+      to={`/${data.media_type}/details/${data.id}`} className='text-blue-400'>more</Link>
     </p>
     
     <p className='text-white mt-2'>
     <i className="text-yellow-600 ri-megaphone-fill mr-1"></i>{data.release_date || "No Information"}
     <i className="ml-5 mr-1 text-yellow-600 ri-video-on-line"></i>{data.media_type.toUpperCase()}
     </p>
-    <Link className='mt-5 p-3 bg-[#6556CD] rounded-lg text-white font-semibold'>Watch Trailer</Link>
+
+    <Link 
+      to={`/${data.media_type}/details/${data.id}/trailer`}
+     className='mt-5 p-3 bg-[#6556CD] rounded-lg text-white font-semibold'>Watch Trailer</Link>
     </div>
   )
 }

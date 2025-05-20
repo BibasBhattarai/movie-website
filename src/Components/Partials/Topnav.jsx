@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import noimage from '/noimage.jpg'
 
+
 const Topnav = () => {
   
   const [query,setquery]=useState(" ");
@@ -39,9 +40,10 @@ const Topnav = () => {
 
 
          {/* < search box > */}
-      <div className='absolute w-[50%] max-h-[50vh] bg-zinc-100 top-[100%] left-[6%] overflow-auto  rounded'>
+      <div className='z-[100] absolute w-[50%] max-h-[50vh] bg-zinc-100 top-[100%] left-[6%] overflow-auto  rounded'>
       {searches.map((s,i)=>(
-         <Link key={i} 
+         <Link 
+            to={`/${s.media_type}/details/${s.id}`} key={i} 
          className='hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 w-[100%] p-10 flex justify-start items-center border-b-2
          border-zinc-300'>
             <img
